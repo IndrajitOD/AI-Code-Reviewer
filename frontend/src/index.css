@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+/* Required: Tailwind's h-full only works if ancestors have a defined height */
+html, body, #root {
+  height: 100%;
+  width: 100%;
+  font-family: 'Inter', sans-serif;
+}
+
+/* react-simple-code-editor: can't target these with Tailwind */
+.code-editor-container { height: 100%; width: 100%; overflow: auto; }
+.code-editor-container textarea { outline: none !important; }
+.code-editor-container pre,
+.code-editor-container pre code {
+  height: 100%; width: 100%;
+  margin: 0 !important;
+  background-color: #fafcff !important;
+}
+
+/* Prism token colors: pseudo-class selectors, not possible in Tailwind */
+.token.comment, .token.prolog, .token.doctype, .token.cdata { color: #a0aec0; font-style: italic; }
+.token.keyword   { color: #4ecdc4; font-weight: 600; }
+.token.function  { color: #667eea; }
+.token.string    { color: #f6a085; }
+.token.number    { color: #d4a84b; }
+.token.operator  { color: #1a2940; }
+.token.punctuation { color: #8a96a8; }
+.token.boolean   { color: #4ecdc4; font-weight: 600; }
+.token.class-name { color: #44af69; font-weight: 600; }
+
+/* Scrollbar: ::-webkit-scrollbar pseudo-element not supported in Tailwind */
+::-webkit-scrollbar { width: 5px; height: 5px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #d4dce8; border-radius: 10px; }
+::-webkit-scrollbar-thumb:hover { background: #b8c4d4; }
+
+/* @keyframes: not possible in Tailwind without config */
+@keyframes statusPulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50%       { opacity: 0.5; transform: scale(0.82); }
+}
+.status-dot { animation: statusPulse 1.8s infinite; }
+
+/* Markdown nested selectors: deeply nested element targeting */
+.review-prose { font-size: 14px; line-height: 1.7; color: #2d3748; }
+.review-prose h1, .review-prose h2, .review-prose h3 { color: #1a2940; font-weight: 700; margin-top: 20px; margin-bottom: 8px; }
+.review-prose h1 { font-size: 18px; }
+.review-prose h2 { font-size: 16px; }
+.review-prose h3 { font-size: 14px; }
+.review-prose p  { margin-bottom: 12px; }
+.review-prose code { background: #f0f4f8; color: #4ecdc4; border-radius: 5px; padding: 2px 6px; font-size: 12.5px; }
+.review-prose pre { background: #1a2940 !important; border-radius: 10px; padding: 14px 16px; overflow-x: auto; margin: 12px 0; }
+.review-prose pre code { background: transparent; color: #e2e8f0; font-size: 13px; }
+.review-prose ul, .review-prose ol { margin: 8px 0; padding-left: 20px; }
+.review-prose li { margin-bottom: 6px; }
+.review-prose strong { color: #1a2940; font-weight: 600; }
+.review-prose blockquote { border-left: 3px solid #4ecdc4; padding-left: 14px; color: #718096; font-style: italic; margin: 12px 0; }
