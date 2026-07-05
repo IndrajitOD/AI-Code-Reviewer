@@ -2,7 +2,8 @@
 
 > An intelligent, AI-powered code review tool that analyzes your code instantly for bugs, security vulnerabilities, performance issues, and best practices — powered by **Groq** and **Meta's Llama 3.3 70B** model.
 
-🌐 **Live Demo:** [https://ai-code-reviewer-api-5h5s.onrender.com](https://ai-code-reviewer-api-5h5s.onrender.com)  
+🌐 **Live Demo:** [https://ai-code-reviewer-1ka2.onrender.com](https://ai-code-reviewer-1ka2.onrender.com)  
+⚙️ **Backend API:** [https://ai-code-reviewer-api-5h5s.onrender.com](https://ai-code-reviewer-api-5h5s.onrender.com)  
 👨‍💻 **Author:** [Indrajit Bhowmick](https://github.com/IndrajitOD)
 
 ---
