@@ -12,7 +12,7 @@ export function useCodeReview() {
     setLoading(true)
     setReview('')
     try {
-      const apiUrl = https://ai-code-reviewer-api-5h5s.onrender.com/
+      const apiUrl = import.meta.env.VITE_API_URL || 'http://localhost:4000'
       const response = await axios.post(`${apiUrl}/review/analyze`, { code, language })
       setReview(response.data)
     } catch (error) {
